@@ -3,24 +3,47 @@ package lokovsek.pir.loadingpivo
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import lokovsek.pir.loadingpivo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        navController = findNavController(R.id.nav_host_fragment)
+        bottomNavigationView = binding.navView;
+        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
     }
+
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
+
+    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_ale -> {
+                    navController.navigate(R.id.beerFragment)
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.navigation_stouts -> {
+                    navController.navigate(R.id.beerFragment)
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.navigation_red_ale -> {
+                    navController.navigate(R.id.beerFragment)
+                    return@OnNavigationItemSelectedListener true
+                }
+            }
+            false
+        }
+
 }
