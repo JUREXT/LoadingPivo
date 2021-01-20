@@ -3,4 +3,10 @@
     <string name="title_ale">Ale</string>
     <string name="title_stouts">Stouts</string>
     <string name="title_red_ale">Red Ale</string>
+    <string name="image_view_description">imageDescription</string>
+    <string name="rating_average">Average</string>
+    <string name="rating_reviews">Review</string>
+    <string name="beer_name_ph">ALE</string>
+    <string name="beer_price_ph">price</string>
+    <string name="beer_rating_ph">rating</string>
 </resources>

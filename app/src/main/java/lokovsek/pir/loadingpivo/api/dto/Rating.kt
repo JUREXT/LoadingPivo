@@ -11,7 +11,7 @@ data class Rating(
 
     @Expose
     @SerializedName("reviews")
-    val reviews: Long? = null,
+    val reviews: Double? = null,
 
     ) {
     override fun toString(): String {

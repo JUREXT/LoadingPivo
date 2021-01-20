@@ -1,4 +1,4 @@
-package lokovsek.pir.loadingpivo.ui
+package lokovsek.pir.loadingpivo
 
 import android.app.Application
 import android.os.Build

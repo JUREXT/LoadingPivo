@@ -1,4 +1,4 @@
-package lokovsek.pir.loadingpivo.ui.repository
+package lokovsek.pir.loadingpivo.repository
 
 import androidx.lifecycle.LiveData
 import kotlinx.coroutines.*
