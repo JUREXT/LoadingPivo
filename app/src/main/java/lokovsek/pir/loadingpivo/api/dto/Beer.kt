@@ -1,4 +1,4 @@
-package lokovsek.pir.loadingpivo.ui.repository.dto
+package lokovsek.pir.loadingpivo.api.dto
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

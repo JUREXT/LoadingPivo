@@ -8,5 +8,10 @@
         android:id="@+id/beerFragment"
         android:name="lokovsek.pir.loadingpivo.ui.home.BeerFragment"
         android:label="beer_fragment"
-        tools:layout="@layout/beer_fragment" />
+        tools:layout="@layout/beer_fragment" >
+        <argument
+            android:name="beerType"
+            app:argType="string"
+            android:defaultValue="ale" />
+    </fragment>
 </navigation>

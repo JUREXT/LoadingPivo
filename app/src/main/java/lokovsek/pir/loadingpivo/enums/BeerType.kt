@@ -1,4 +1,4 @@
-package lokovsek.pir.loadingpivo.ui.repository
+package lokovsek.pir.loadingpivo.enums
 
 enum class BeerType(val type: String) {
     ALE("ale"),

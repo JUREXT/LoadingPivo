@@ -1,4 +1,4 @@
-package lokovsek.pir.loadingpivo.ui.repository
+package lokovsek.pir.loadingpivo.api
 
 import lokovsek.pir.loadingpivo.Constants
 import retrofit2.Retrofit
